@@ -1,0 +1,69 @@
+@import 'variables/colors';
+
+.titleContainer {
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.title {
+  padding-left: 14px;
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+.backLink {
+  font-size: 0;
+
+  &:hover .backIcon {
+    opacity: 0.7;
+  }
+
+  &:active .backIcon {
+    opacity: 0.7;
+  }
+}
+
+.backIcon {
+
+  transition: opacity ease-in-out 0.17s;
+
+  &:before {
+    content: url("../public/back.svg");
+  }
+}
+
+.sectionWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.appointmentsListContainer {
+  height: 84vh;
+  overflow-y: scroll;
+  padding-right: 20px;
+
+  scrollbar-color: $dark-blue $light-violet;
+  scrollbar-width: inherit;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $light-violet;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $dark-blue;
+    border-radius: 5px;
+  }
+}
+
+.calendarContainer {
+  align-self: flex-start;
+  padding-left: 40px;
+}
+

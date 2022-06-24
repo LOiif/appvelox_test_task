@@ -1,0 +1,130 @@
+@import "variables/colors";
+
+$transition-time: 0.27s;
+
+.container {
+  min-height: 100vh;
+  min-width: 190px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  color: white;
+  background-color: $dark-blue;
+}
+
+.navList {
+  padding-top: 6px;
+  list-style: none;
+}
+
+.navLink {
+  position: relative;
+  width: 100%;
+  display: flex;
+
+  padding: 14px 0 14px 20px;
+
+  transition: all ease $transition-time;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &::before {
+    opacity: 0;
+    content: '';
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 3px;
+
+    background-color: $violet;
+    transition: all ease $transition-time;
+  }
+
+  &Active {
+    background-color: white;
+    color: $violet;
+
+    & .linkIcon {
+      background-color: $violet;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.buttonContainer {
+  padding: 10px 20px 0 20px;
+}
+
+.linkIcon {
+  width: 18px;
+  height: 18px;
+  margin-right: 14px;
+  background-color: white;
+  mask-position: center;
+  mask-size: cover;
+
+  transition: all ease $transition-time;
+
+  &.doctorsAndClinics {
+    mask-image: url("../public/doctors_and_clinics.svg");
+  }
+
+  &.profile {
+    mask-image: url("../public/profile.svg");
+  }
+
+  &.messages {
+    mask-image: url("../public/messages.svg");
+  }
+
+  &.testing {
+    mask-image: url("../public/testing.svg");
+  }
+
+  &.goodKnow {
+    mask-image: url("../public/book.svg");
+  }
+
+  &.help {
+    mask-image: url("../public/help.svg");
+  }
+}
+
+.footerLogoLink {
+  display: flex;
+  padding-top: 4px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+
+  transition: all ease $transition-time;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}

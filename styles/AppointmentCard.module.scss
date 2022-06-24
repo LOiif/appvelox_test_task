@@ -1,0 +1,57 @@
+@import "variables/colors";
+
+.container {
+  padding: 20px;
+  width: 475px;
+  background: #FFFFFF;
+  box-shadow: 0 0 5px $light-violet;
+  border-radius: 5px;
+}
+
+.wrapper {
+
+}
+
+.time {
+  font-weight: 500;
+  font-size: 1.15rem;
+  margin-bottom: 5px;
+}
+
+.address {
+  margin-bottom: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.doctorContainer {
+  display: flex;
+  align-items: center;
+}
+
+.avatarContainer {
+  margin-right: 10px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.doctorInfo {
+
+}
+
+.doctorName {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.doctorType {
+  color: $light-violet;
+}

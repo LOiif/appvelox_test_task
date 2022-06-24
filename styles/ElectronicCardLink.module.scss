@@ -1,0 +1,78 @@
+@import 'variables/colors';
+
+$transition-time: 0.27s;
+
+.link {
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    .icon {
+      background-color: white;
+    }
+
+    .container {
+      border-color: $light-blue;
+    }
+
+    .iconContainer {
+      background-color: $light-blue;
+    }
+
+    .title::before {
+      background-color: $light-blue;
+    }
+  }
+
+}
+
+.container {
+  display: flex;
+  width: 540px;
+  min-height: 183px;
+  box-shadow: 0 0 5px $light-violet;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: all ease-in-out $transition-time;
+
+}
+
+.iconContainer {
+  padding: 67px 41px 66px 42px;
+  transition: all ease-in-out $transition-time;
+}
+
+.textContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 34px;
+}
+
+.title {
+  position: relative;
+  font-weight: 400;
+  font-size: 2rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+
+    background-color: $light-violet;
+
+    bottom: -10px;
+    height: 2px;
+    width: 335px;
+    border-radius: 2px;
+
+    transition: all ease-in-out $transition-time;
+
+  }
+}
+
+.icon {
+  transition: all ease-in-out $transition-time;
+}

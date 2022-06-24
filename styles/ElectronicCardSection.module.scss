@@ -1,0 +1,89 @@
+@import 'variables/colors';
+
+$transition-time: 0.27s;
+
+.title {
+  padding-left: 20px;
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-right: -16px;
+}
+
+.item {
+  margin-top: 15px;
+  margin-right: 16px;
+}
+
+.icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: $light-violet;
+
+  &.infoIcon {
+    mask-image: url("../public/doc_info.svg");
+  }
+
+  &.resultIcon {
+    mask-image: url("../public/analysis_results.svg");
+  }
+
+  &.addInfoIcon {
+    mask-image: url("../public/add_doc.svg");
+  }
+
+  &.historyIcon {
+    mask-image: url("../public/history.svg");
+  }
+}
+
+.cardText {
+  font-size: 1.15rem;
+}
+
+.infoList {
+  list-style: none;
+  font-size: 1.15rem;
+
+}
+
+.infoItem {
+  position: relative;
+  padding-left: 15px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 6px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+    background-color: $light-violet;
+
+    transform: translateY(-50%);
+    transition: all ease-in-out $transition-time;
+  }
+}
+
+:global(.electronicCardLinkFocus),
+:global(.electronicCardLinkActive) {
+  .infoItem::before {
+    background-color: $light-blue;
+  }
+}
